@@ -1,7 +1,6 @@
 {
     "name": "colbygatte/starter-project",
     "require": {
-        "colbygatte/cg-utilities": "^0",
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {

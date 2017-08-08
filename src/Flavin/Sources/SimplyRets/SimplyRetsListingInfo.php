@@ -245,4 +245,23 @@ class SimplyRetsListingInfo extends ListingInfoInterface
         
         return true;
     }
+    
+    /**
+     * Set info that has already been dotted
+     *
+     * @param $info
+     *
+     * @return bool
+     */
+    public function setDottedInfo($info)
+    {
+        $this->info = $info;
+        
+        return true;
+    }
+    
+    public function getInfo()
+    {
+        return $this->info;
+    }
 }

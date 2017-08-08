@@ -118,4 +118,18 @@ class SimplyRetsSearchParameters implements ListingSearchParametersInterface
     {
         return $this->set('brokers', $brokers);
     }
+    
+    /**
+     * @param int $minimum
+     * @param int $maximum
+     *
+     * @return mixed
+     */
+    public function price($minimum, $maximum)
+    {
+        return $this->set([
+            'minprice' => $minimum,
+            'maxprice' => $maximum
+        ]);
+    }
 }

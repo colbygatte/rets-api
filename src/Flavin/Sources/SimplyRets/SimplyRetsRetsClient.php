@@ -9,6 +9,16 @@ class SimplyRetsRetsClient
 {
     const API_PROPERTIES = 'https://api.simplyrets.com/properties';
     
+    protected $user;
+    
+    protected $pass;
+    
+    public function __construct($user, $pass)
+    {
+        $this->user = $user;
+        $this->pass = $pass;
+    }
+    
     /**
      * @param \DevDept\Flavin\Interfaces\ListingSearchParametersInterface $searchParameters
      *
@@ -22,10 +32,10 @@ class SimplyRetsRetsClient
     
         $response = $httpClient->get(
             $requestUri,
-            ['auth' => ['simplyrets', 'simplyrets']]
+            ['auth' => [$this->user, $this->pass]]
         );
     
-        return SimplyRetsListingCollection::fromJsonArray(
+        return SimplyRetsListingCollection::createFromJsonArray(
             $response->getBody()->getContents()
         );
     }

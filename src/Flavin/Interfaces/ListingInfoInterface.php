@@ -17,6 +17,11 @@ abstract class ListingInfoInterface
     abstract public function setInfo($info);
     
     /**
+     * return mixed
+     */
+    abstract public function getInfo();
+    
+    /**
      * @return float
      */
     abstract public function getListPrice();

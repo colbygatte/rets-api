@@ -9,10 +9,36 @@ interface ListingSearchParametersInterface
      */
     public function makeQuery();
     
+    /**
+     * @param int $minimum
+     * @param int $maximum
+     *
+     * @return mixed
+     */
+    public function price($minimum, $maximum);
+    
+    /**
+     * @param int $minimum
+     * @param int $maximum
+     *
+     * @return mixed
+     */
     public function bedrooms($minimum, $maximum);
     
+    /**
+     * @param float|int $minimum
+     * @param float|int $maximum
+     *
+     * @return mixed
+     */
     public function bathrooms($minimum, $maximum);
     
+    /**
+     * @param int $minimum
+     * @param int $maximum
+     *
+     * @return mixed
+     */
     public function area($minimum, $maximum);
     
     /**

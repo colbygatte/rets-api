@@ -11,7 +11,7 @@ class SimplyRetsListingCollection extends ListingCollectionInterface
      *
      * @return static
      */
-    static function fromJsonArray($jsonArray) {
+    static function createFromJsonArray($jsonArray) {
         $listings = new static;
         
         foreach (json_decode($jsonArray, true) as $json) {
