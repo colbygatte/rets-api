@@ -1,5 +1,5 @@
 {
-    "name": "colbygatte/starter-project",
+    "name": "colbygatte/rets",
     "require": {
         "guzzlehttp/guzzle": "^6.3"
     },
@@ -9,9 +9,8 @@
     },
     "autoload": {
         "psr-4": {
-            "DevDept\\Rets\\": "src/Rets/"
-        },
-        "files": ["utilities/utilities.php"]
+            "ColbyGatte\\Rets\\": "src/Rets/"
+        }
     },
     "autoload-dev": {
         "psr-4": {

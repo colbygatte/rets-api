@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use DevDept\Rets\Sources\SimplyRets\SimplyRetsListingInfo;
-use DevDept\Rets\Sources\SimplyRets\SimplyRetsSearchParameters;
+use ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsListingInfo;
+use ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsSearchParameters;
 use Tests\TestCase;
 
 class ListingTest extends TestCase

@@ -1,8 +1,8 @@
 <?php
 
-namespace DevDept\Rets\Sources\SimplyRets;
+namespace ColbyGatte\Rets\Sources\SimplyRets;
 
-use DevDept\Rets\Interfaces\ListingSearchParametersInterface;
+use ColbyGatte\Rets\Interfaces\ListingSearchParametersInterface;
 use GuzzleHttp\Client;
 
 class SimplyRetsRetsClient
@@ -20,9 +20,9 @@ class SimplyRetsRetsClient
     }
     
     /**
-     * @param \DevDept\Rets\Interfaces\ListingSearchParametersInterface $searchParameters
+     * @param \ColbyGatte\Rets\Interfaces\ListingSearchParametersInterface $searchParameters
      *
-     * @return \DevDept\Rets\Sources\SimplyRets\SimplyRetsListingCollection
+     * @return \ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsListingCollection
      */
     public function doSearch(ListingSearchParametersInterface $searchParameters)
     {

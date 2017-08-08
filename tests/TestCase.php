@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use DevDept\Rets\Sources\SimplyRets\SimplyRetsRetsClient;
+use ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsRetsClient;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
@@ -15,7 +15,7 @@ class TestCase extends BaseTestCase
     }
     
     /**
-     * @return \DevDept\Rets\Sources\SimplyRets\SimplyRetsRetsClient
+     * @return \ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsRetsClient
      */
     protected function makeSimplyRetsClient()
     {

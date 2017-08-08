@@ -1,11 +1,11 @@
 <?php
 
-namespace DevDept\Rets\Interfaces;
+namespace ColbyGatte\Rets\Interfaces;
 
 interface RetsClientInterface
 {
     /**
-     * @param \DevDept\Rets\Interfaces\ListingSearchParametersInterface $searchParameters
+     * @param \ColbyGatte\Rets\Interfaces\ListingSearchParametersInterface $searchParameters
      *
      * @return mixed
      */

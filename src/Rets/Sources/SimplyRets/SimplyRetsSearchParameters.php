@@ -1,8 +1,8 @@
 <?php
 
-namespace DevDept\Rets\Sources\SimplyRets;
+namespace ColbyGatte\Rets\Sources\SimplyRets;
 
-use DevDept\Rets\Interfaces\ListingSearchParametersInterface;
+use ColbyGatte\Rets\Interfaces\ListingSearchParametersInterface;
 use function GuzzleHttp\Psr7\build_query;
 
 class SimplyRetsSearchParameters implements ListingSearchParametersInterface

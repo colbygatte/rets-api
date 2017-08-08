@@ -1,6 +1,6 @@
 <?php
 
-namespace DevDept\Rets\Interfaces;
+namespace ColbyGatte\Rets\Interfaces;
 
 use ArrayAccess;
 use Iterator;
@@ -8,14 +8,14 @@ use Iterator;
 abstract class ListingCollectionInterface implements ArrayAccess, Iterator
 {
     /**
-     * @var \DevDept\Rets\Sources\SimplyRets\SimplyRetsListingInfo
+     * @var \ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsListingInfo
      */
     protected $listings;
     
     /**
      * ListingCollection constructor.
      *
-     * @param \DevDept\Rets\Listing[] $listings
+     * @param \ColbyGatte\Rets\Listing[] $listings
      */
     public function __construct($listings = [])
     {
@@ -23,7 +23,7 @@ abstract class ListingCollectionInterface implements ArrayAccess, Iterator
     }
     
     /**
-     * @return \DevDept\Rets\Interfaces\ListingInfoInterface
+     * @return \ColbyGatte\Rets\Interfaces\ListingInfoInterface
      */
     public function current()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace DevDept\Rets\Interfaces;
+namespace ColbyGatte\Rets\Interfaces;
 
 /**
  * Responsibility of the ListingInfo class is to pull data from the ListingSource

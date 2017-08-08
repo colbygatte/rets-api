@@ -1,6 +1,6 @@
 <?php
 
-namespace DevDept\Rets\Interfaces;
+namespace ColbyGatte\Rets\Interfaces;
 
 interface ListingSearchParametersInterface
 {

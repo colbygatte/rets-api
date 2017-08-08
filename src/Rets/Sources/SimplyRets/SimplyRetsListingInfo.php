@@ -1,8 +1,8 @@
 <?php
 
-namespace DevDept\Rets\Sources\SimplyRets;
+namespace ColbyGatte\Rets\Sources\SimplyRets;
 
-use DevDept\Rets\Interfaces\ListingInfoInterface;
+use ColbyGatte\Rets\Interfaces\ListingInfoInterface;
 
 /**
  * Responsibility of the ListingInfo class is to pull data from the ListingSource
@@ -241,7 +241,7 @@ class SimplyRetsListingInfo extends ListingInfoInterface
      */
     public function setInfo($info)
     {
-        $this->info = \DevDept\Rets\Arr::dot($info, ['photos']);
+        $this->info = \ColbyGatte\Rets\Arr::dot($info, ['photos']);
         
         return true;
     }

@@ -1,8 +1,8 @@
 <?php
 
-namespace DevDept\Rets\Sources\SimplyRets;
+namespace ColbyGatte\Rets\Sources\SimplyRets;
 
-use DevDept\Rets\Interfaces\ListingCollectionInterface;
+use ColbyGatte\Rets\Interfaces\ListingCollectionInterface;
 
 class SimplyRetsListingCollection extends ListingCollectionInterface
 {
