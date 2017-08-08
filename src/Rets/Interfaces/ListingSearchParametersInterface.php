@@ -1,6 +1,6 @@
 <?php
 
-namespace DevDept\Flavin\Interfaces;
+namespace DevDept\Rets\Interfaces;
 
 interface ListingSearchParametersInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace DevDept\Flavin\Sources\SimplyRets;
+namespace DevDept\Rets\Sources\SimplyRets;
 
-use DevDept\Flavin\Interfaces\ListingInfoInterface;
+use DevDept\Rets\Interfaces\ListingInfoInterface;
 
 /**
  * Responsibility of the ListingInfo class is to pull data from the ListingSource
@@ -241,7 +241,7 @@ class SimplyRetsListingInfo extends ListingInfoInterface
      */
     public function setInfo($info)
     {
-        $this->info = \DevDept\Flavin\Arr::dot($info, ['photos']);
+        $this->info = \DevDept\Rets\Arr::dot($info, ['photos']);
         
         return true;
     }

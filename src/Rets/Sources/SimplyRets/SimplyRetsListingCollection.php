@@ -1,8 +1,8 @@
 <?php
 
-namespace DevDept\Flavin\Sources\SimplyRets;
+namespace DevDept\Rets\Sources\SimplyRets;
 
-use DevDept\Flavin\Interfaces\ListingCollectionInterface;
+use DevDept\Rets\Interfaces\ListingCollectionInterface;
 
 class SimplyRetsListingCollection extends ListingCollectionInterface
 {

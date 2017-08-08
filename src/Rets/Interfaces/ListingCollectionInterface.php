@@ -1,6 +1,6 @@
 <?php
 
-namespace DevDept\Flavin\Interfaces;
+namespace DevDept\Rets\Interfaces;
 
 use ArrayAccess;
 use Iterator;
@@ -8,14 +8,14 @@ use Iterator;
 abstract class ListingCollectionInterface implements ArrayAccess, Iterator
 {
     /**
-     * @var \DevDept\Flavin\Sources\SimplyRets\SimplyRetsListingInfo
+     * @var \DevDept\Rets\Sources\SimplyRets\SimplyRetsListingInfo
      */
     protected $listings;
     
     /**
      * ListingCollection constructor.
      *
-     * @param \DevDept\Flavin\Listing[] $listings
+     * @param \DevDept\Rets\Listing[] $listings
      */
     public function __construct($listings = [])
     {
@@ -23,7 +23,7 @@ abstract class ListingCollectionInterface implements ArrayAccess, Iterator
     }
     
     /**
-     * @return \DevDept\Flavin\Interfaces\ListingInfoInterface
+     * @return \DevDept\Rets\Interfaces\ListingInfoInterface
      */
     public function current()
     {

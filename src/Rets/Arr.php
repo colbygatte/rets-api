@@ -1,6 +1,6 @@
 <?php
 
-namespace DevDept\Flavin;
+namespace DevDept\Rets;
 
 class Arr
 {

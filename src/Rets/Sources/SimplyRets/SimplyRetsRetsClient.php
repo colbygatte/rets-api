@@ -1,8 +1,8 @@
 <?php
 
-namespace DevDept\Flavin\Sources\SimplyRets;
+namespace DevDept\Rets\Sources\SimplyRets;
 
-use DevDept\Flavin\Interfaces\ListingSearchParametersInterface;
+use DevDept\Rets\Interfaces\ListingSearchParametersInterface;
 use GuzzleHttp\Client;
 
 class SimplyRetsRetsClient
@@ -20,9 +20,9 @@ class SimplyRetsRetsClient
     }
     
     /**
-     * @param \DevDept\Flavin\Interfaces\ListingSearchParametersInterface $searchParameters
+     * @param \DevDept\Rets\Interfaces\ListingSearchParametersInterface $searchParameters
      *
-     * @return \DevDept\Flavin\Sources\SimplyRets\SimplyRetsListingCollection
+     * @return \DevDept\Rets\Sources\SimplyRets\SimplyRetsListingCollection
      */
     public function doSearch(ListingSearchParametersInterface $searchParameters)
     {

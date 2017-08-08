@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DevDept\\Flavin\\": "src/Flavin/"
+            "DevDept\\Rets\\": "src/Rets/"
         },
         "files": ["utilities/utilities.php"]
     },

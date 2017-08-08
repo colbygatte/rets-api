@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use DevDept\Flavin\Sources\SimplyRets\SimplyRetsListingInfo;
-use DevDept\Flavin\Sources\SimplyRets\SimplyRetsSearchParameters;
+use DevDept\Rets\Sources\SimplyRets\SimplyRetsListingInfo;
+use DevDept\Rets\Sources\SimplyRets\SimplyRetsSearchParameters;
 use Tests\TestCase;
 
 class ListingTest extends TestCase

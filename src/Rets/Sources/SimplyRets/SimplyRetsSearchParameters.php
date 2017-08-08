@@ -1,8 +1,8 @@
 <?php
 
-namespace DevDept\Flavin\Sources\SimplyRets;
+namespace DevDept\Rets\Sources\SimplyRets;
 
-use DevDept\Flavin\Interfaces\ListingSearchParametersInterface;
+use DevDept\Rets\Interfaces\ListingSearchParametersInterface;
 use function GuzzleHttp\Psr7\build_query;
 
 class SimplyRetsSearchParameters implements ListingSearchParametersInterface

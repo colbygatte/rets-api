@@ -1,11 +1,11 @@
 <?php
 
-namespace DevDept\Flavin\Interfaces;
+namespace DevDept\Rets\Interfaces;
 
 interface RetsClientInterface
 {
     /**
-     * @param \DevDept\Flavin\Interfaces\ListingSearchParametersInterface $searchParameters
+     * @param \DevDept\Rets\Interfaces\ListingSearchParametersInterface $searchParameters
      *
      * @return mixed
      */
