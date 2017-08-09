@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsListingInfo;
 use ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsSearchParameters;
 use Tests\TestCase;
+use function GuzzleHttp\Psr7\build_query;
 
 class ListingTest extends TestCase
 {
@@ -23,7 +24,7 @@ class ListingTest extends TestCase
         
         $newListing = new SimplyRetsListingInfo;
         $newListing->setDottedInfo(unserialize($serialized));
-    
+        
         $this->assertNotEmpty($newListing->getAgentFullName());
     }
 }

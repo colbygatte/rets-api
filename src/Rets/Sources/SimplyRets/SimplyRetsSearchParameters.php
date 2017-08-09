@@ -14,7 +14,7 @@ class SimplyRetsSearchParameters implements ListingSearchParametersInterface
      */
     public function makeQuery()
     {
-        return build_query($this->query);
+        return build_query(array_filter($this->query));
     }
     
     public function bedrooms($minimum, $maximum)
