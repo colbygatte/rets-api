@@ -72,7 +72,7 @@ class SimplyRetsSearchParameters implements ListingSearchParametersInterface
      * @param string|array $propertyType
      */
     public function propertyType($propertyType) {
-        $this->set('type', is_array($propertyType) ? $propertyType : [$propertyType]);
+        return $this->set('type', is_array($propertyType) ? $propertyType : [$propertyType]);
     }
     
     /**
