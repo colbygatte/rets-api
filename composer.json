@@ -10,7 +10,8 @@
     "autoload": {
         "psr-4": {
             "ColbyGatte\\Rets\\": "src/Rets/"
-        }
+        },
+        "files": ["utilities/utilities.php"]
     },
     "autoload-dev": {
         "psr-4": {
