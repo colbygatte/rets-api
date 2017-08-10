@@ -70,6 +70,8 @@ class SimplyRetsSearchParameters implements ListingSearchParametersInterface
     
     /**
      * @param string|array $propertyType
+     *
+     * @return \ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsSearchParameters
      */
     public function propertyType($propertyType) {
         return $this->set('type', is_array($propertyType) ? $propertyType : [$propertyType]);
