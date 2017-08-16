@@ -73,7 +73,8 @@ class SimplyRetsSearchParameters implements ListingSearchParametersInterface
      *
      * @return \ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsSearchParameters
      */
-    public function propertyType($propertyType) {
+    public function propertyType($propertyType)
+    {
         return $this->set('type', is_array($propertyType) ? $propertyType : [$propertyType]);
     }
     
@@ -139,6 +140,14 @@ class SimplyRetsSearchParameters implements ListingSearchParametersInterface
         return $this->set([
             'minprice' => $minimum,
             'maxprice' => $maximum
+        ]);
+    }
+    
+    public function paginate($limit, $lastId = 0)
+    {
+        return $this->set([
+            'limit' => $limit,
+            'lastId' => $lastId
         ]);
     }
 }

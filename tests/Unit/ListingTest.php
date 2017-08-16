@@ -12,19 +12,8 @@ class ListingTest extends TestCase
     /** @test */
     public function can_get_random_listing()
     {
-        $client = $this->makeSimplyRetsClient();
-        
-        $results = $client->doSearch(
+        $listing = $this->getClient()->doSearch(
             (new SimplyRetsSearchParameters)->price(250000, null)
-        );
-        
-        $listing = $results->current();
-        
-        $serialized = serialize($listing->getInfo());
-        
-        $newListing = new SimplyRetsListingInfo;
-        $newListing->setDottedInfo(unserialize($serialized));
-        
-        $this->assertNotEmpty($newListing->getAgentFullName());
+        )->current();
     }
 }

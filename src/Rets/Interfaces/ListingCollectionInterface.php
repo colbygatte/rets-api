@@ -22,6 +22,11 @@ abstract class ListingCollectionInterface implements ArrayAccess, Iterator
         $this->listings = $listings;
     }
     
+    public function last()
+    {
+        return end($this->listings);
+    }
+    
     /**
      * @return \ColbyGatte\Rets\Interfaces\ListingInfoInterface
      */
@@ -49,7 +54,7 @@ abstract class ListingCollectionInterface implements ArrayAccess, Iterator
     {
         reset($this->listings);
     }
-
+    
     public function offsetExists($offset)
     {
         return isset($this->listings[$offset]);

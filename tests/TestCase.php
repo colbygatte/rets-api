@@ -7,18 +7,12 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
 {
-    protected function setUp()
-    {
-        parent::setUp();
-
-        // Set up unit tests here
-    }
-    
+    static protected $client;
     /**
      * @return \ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsRetsClient
      */
-    protected function makeSimplyRetsClient()
+    protected function getClient()
     {
-        return new SimplyRetsRetsClient('simplyrets', 'simplyrets');
+        return static::$client ?: static::$client = new SimplyRetsRetsClient('simplyrets', 'simplyrets');
     }
 }

@@ -210,6 +210,11 @@ class SimplyRetsListingInfo extends ListingInfoInterface
         return $this->get('privateRemarks');
     }
     
+    public function getYearBuilt()
+    {
+        return $this->get('property.yearBuilt');
+    }
+    
     /**
      * @return string
      */

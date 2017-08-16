@@ -143,6 +143,8 @@ abstract class ListingInfoInterface
      */
     abstract public function getPrivateRemarks();
     
+    abstract public function getYearBuilt();
+    
     /**
      * @return string
      */
