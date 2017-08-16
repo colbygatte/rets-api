@@ -37,6 +37,6 @@ class SimplyRetsRetsClient
     
         return SimplyRetsListingCollection::createFromJsonArray(
             $response->getBody()->getContents()
-        );
+        )->setResponse($response);
     }
 }

@@ -7,6 +7,31 @@ use ColbyGatte\Rets\Interfaces\ListingCollectionInterface;
 class SimplyRetsListingCollection extends ListingCollectionInterface
 {
     /**
+     * @var \GuzzleHttp\Psr7\Response
+     */
+    protected $response;
+    
+    /**
+     * @param \GuzzleHttp\Psr7\Response $response
+     *
+     * @return $this
+     */
+    public function setResponse($response)
+    {
+        $this->response = $response;
+        
+        return $this;
+    }
+    
+    /**
+     * @return \GuzzleHttp\Psr7\Response
+     */
+    public function getResponse()
+    {
+        return $this->response;
+    }
+    
+    /**
      * @param $jsonArray
      *
      * @return static
