@@ -78,9 +78,9 @@ abstract class ListingCollectionInterface implements ArrayAccess, Iterator
     {
         if ($offset === null) {
             $this->listings[] = $value;
+        } else {
+            $this->listings[$offset] = $value;
         }
-        
-        $this->listings[$offset] = $value;
     }
     
     public function offsetUnset($offset)
