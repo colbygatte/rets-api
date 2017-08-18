@@ -38,7 +38,8 @@ class SimplyRetsRetsClient implements RetsClientInterface
         $data = json_decode($response->getBody()->getContents(), true);
         
         if (! empty($data)) {
-            $listing = (new SimplyRetsListingInfo)->setInfo($data);
+            $listing = new SimplyRetsListingInfo;
+            $listing->setInfo($data);
         } else {
             $listing = false;
         }
