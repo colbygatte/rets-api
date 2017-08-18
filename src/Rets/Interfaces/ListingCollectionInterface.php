@@ -22,6 +22,9 @@ abstract class ListingCollectionInterface implements ArrayAccess, Iterator
         $this->listings = $listings;
     }
     
+    /**
+     * @return \ColbyGatte\Rets\Interfaces\ListingInfoInterface
+     */
     public function last()
     {
         return end($this->listings);
