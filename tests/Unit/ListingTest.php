@@ -2,19 +2,19 @@
 
 namespace Tests\Unit;
 
-use ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsListingInfo;
-use ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsSearchParameters;
+use ColbyGatte\SimplyRets\ListingSearchQuery;
 use Tests\TestCase;
-use function GuzzleHttp\Psr7\build_query;
 
 class ListingTest extends TestCase
 {
     /** @test */
     public function can_get_random_listing()
     {
-        $listing = $this->getClient()->doSearch(
-            (new SimplyRetsSearchParameters)->price(250000, null)
-        )->current();
+        $listings = $this->getClient()->doSearch(
+            (new ListingSearchQuery())->minprice(250000)
+        );
+        
+        dump(iterator_to_array($listings));
     }
     
     /** @test */

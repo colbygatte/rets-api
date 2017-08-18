@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ColbyGatte\\Rets\\": "src/Rets/"
+            "ColbyGatte\\SimplyRets\\": "src/SimplyRets/"
         },
         "files": ["utilities/utilities.php"]
     },

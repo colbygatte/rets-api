@@ -1,12 +1,11 @@
 <?php
 
-namespace ColbyGatte\Rets\Sources\SimplyRets;
+namespace ColbyGatte\SimplyRets;
 
-use ColbyGatte\Rets\Interfaces\ListingSearchParametersInterface;
-use ColbyGatte\Rets\Interfaces\RetsClientInterface;
 use GuzzleHttp\Client as HttpClient;
+use function GuzzleHttp\Psr7\build_query;
 
-class SimplyRetsRetsClient implements RetsClientInterface
+class Client
 {
     const API_PROPERTIES = 'https://api.simplyrets.com/properties';
     
@@ -25,11 +24,12 @@ class SimplyRetsRetsClient implements RetsClientInterface
      *
      * @return bool
      */
-    public function getListing($mlsId) {
-        $requestUri = static::API_PROPERTIES.'/'. $mlsId;
+    public function getListing($mlsId)
+    {
+        $requestUri = static::API_PROPERTIES.'/'.$mlsId;
         
         $httpClient = new HttpClient;
-    
+        
         $response = $httpClient->get(
             $requestUri,
             ['auth' => [$this->user, $this->pass]]
@@ -38,7 +38,7 @@ class SimplyRetsRetsClient implements RetsClientInterface
         $data = json_decode($response->getBody()->getContents(), true);
         
         if (! empty($data)) {
-            $listing = new SimplyRetsListingInfo;
+            $listing = new Listing;
             $listing->setInfo($data);
         } else {
             $listing = false;
@@ -48,22 +48,28 @@ class SimplyRetsRetsClient implements RetsClientInterface
     }
     
     /**
-     * @param \ColbyGatte\Rets\Interfaces\ListingSearchParametersInterface $searchParameters
+     * @param ListingSearchQuery|array|string
      *
-     * @return \ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsListingCollection
+     * @return \ColbyGatte\Rets\Sources\SimplyRets\ListingCollection
      */
-    public function doSearch(ListingSearchParametersInterface $searchParameters)
+    public function doSearch($searchParameters)
     {
-        $requestUri = static::API_PROPERTIES.'?'.$searchParameters->makeQuery();
+        if ($searchParameters instanceof ListingSearchQuery) {
+            $queryString = $searchParameters->getQueryString();
+        } else {
+            $queryString = is_array($searchParameters) ? build_query($searchParameters) : (string) $searchParameters;
+        }
+        
+        $requestUri = static::API_PROPERTIES.'?'.$queryString;
         
         $httpClient = new HttpClient;
-    
+        
         $response = $httpClient->get(
             $requestUri,
             ['auth' => [$this->user, $this->pass]]
         );
-    
-        return SimplyRetsListingCollection::createFromJsonArray(
+        
+        return ListingCollection::createFromJsonArray(
             $response->getBody()->getContents()
         )->setResponse($response);
     }

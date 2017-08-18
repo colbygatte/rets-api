@@ -2,17 +2,17 @@
 
 namespace Tests;
 
-use ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsRetsClient;
+use ColbyGatte\SimplyRets\Client;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
 {
     static protected $client;
     /**
-     * @return \ColbyGatte\Rets\Sources\SimplyRets\SimplyRetsRetsClient
+     * @return Client
      */
     protected function getClient()
     {
-        return static::$client ?: static::$client = new SimplyRetsRetsClient('simplyrets', 'simplyrets');
+        return static::$client ?: static::$client = new Client('simplyrets', 'simplyrets');
     }
 }

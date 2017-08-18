@@ -1,6 +1,6 @@
 <?php
 
-namespace ColbyGatte\Rets;
+namespace ColbyGatte\SimplyRets;
 
 class Arr
 {

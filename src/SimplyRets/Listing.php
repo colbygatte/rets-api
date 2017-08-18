@@ -1,15 +1,13 @@
 <?php
 
-namespace ColbyGatte\Rets\Sources\SimplyRets;
-
-use ColbyGatte\Rets\Interfaces\ListingInfoInterface;
+namespace ColbyGatte\SimplyRets;
 
 /**
  * Responsibility of the ListingInfo class is to pull data from the ListingSource
  *
  * @package DevDept\Flavin
  */
-class SimplyRetsListingInfo extends ListingInfoInterface
+class Listing
 {
     /**
      * @var object
@@ -232,11 +230,7 @@ class SimplyRetsListingInfo extends ListingInfoInterface
      */
     public function get($data)
     {
-        if (isset($this->info[$data])) {
-            return $this->info[$data];
-        }
-        
-        return false;
+        return isset($this->info[$data]) ? $this->info[$data] : null;
     }
     
     /**
@@ -246,7 +240,7 @@ class SimplyRetsListingInfo extends ListingInfoInterface
      */
     public function setInfo($info)
     {
-        $this->info = \ColbyGatte\Rets\Arr::dot($info, ['photos']);
+        $this->info = Arr::dot($info, ['photos']);
         
         return true;
     }
