@@ -16,4 +16,10 @@ class ListingTest extends TestCase
             (new SimplyRetsSearchParameters)->price(250000, null)
         )->current();
     }
+    
+    /** @test */
+    public function can_get_single_listing()
+    {
+        // HERE: test for single listing
+    }
 }
