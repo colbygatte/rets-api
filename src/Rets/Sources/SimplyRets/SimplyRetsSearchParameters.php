@@ -27,6 +27,11 @@ class SimplyRetsSearchParameters implements ListingSearchParametersInterface
         ]);
     }
     
+    public function keywords($keywords)
+    {
+        return $this->set('q', $keywords);
+    }
+    
     public function set($key, $value = null)
     {
         if (is_array($key)) {
