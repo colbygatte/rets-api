@@ -50,11 +50,9 @@ class ListingSearchQuery
             foreach ($key as $_key => $_value) {
                 $this->set($_key, $_value);
             }
-            
-            return $this;
+        } else {    
+            $this->query[$key] = $value;
         }
-        
-        $this->query[$key] = $value;
         
         return $this;
     }
